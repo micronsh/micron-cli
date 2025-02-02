@@ -49,7 +49,7 @@ export class CompareCommand {
   }
 
   private compareRow(label: string, value1: string, value2: string, isScore = false, isRisk = false) {
-    let arrow = value1 === value2 ? '=' : (value1 > value2 ? '↑' : '↓');
+    const arrow = value1 === value2 ? '=' : (value1 > value2 ? '↑' : '↓');
     let arrowColor = value1 === value2 ? chalk.blue : (value1 > value2 ? chalk.green : chalk.red);
     
     if (isRisk) {
